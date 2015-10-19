@@ -9,7 +9,7 @@
 
 RTC_DS1307 RTC;
 
-Cron::Cron(TimedCommand *iTimedCommands, int iTimedCommandsSize) {
+Cron::Cron(TimedCommand **iTimedCommands, int iTimedCommandsSize) {
 	timedCommands = iTimedCommands;
 	timedCommandsSize = iTimedCommandsSize;
 
@@ -20,12 +20,14 @@ Cron::Cron(TimedCommand *iTimedCommands, int iTimedCommandsSize) {
 Cron::~Cron() {
 }
 
+
+
 void Cron::loop(){
 	bool match = false;
 	for (int i = 0; i< timedCommandsSize; i++){
-		if (matchCron(timedCommands[i].getCronString(),getTime())){
-			Command *command = timedCommands[i].getCommand();
-			command->execute(timedCommands[i].getParameters());
+		if (matchCron(timedCommands[i]->getCronString(),getTime())){
+			Command *command = timedCommands[i]->getCommand();
+			command->execute(timedCommands[i]->getParameters());
 			match = true;
 		}
 	}
