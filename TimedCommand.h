@@ -11,20 +11,20 @@
 
 class TimedCommand {
 public:
-	TimedCommand(String, Command*);
-	TimedCommand(String, Command*,String);
-	virtual ~TimedCommand();
-	void setCronString(String);
-	void setCommand(Command*);
-	void setParameters(String);
-	Command* getCommand();
-	String getCronString();
-	String getParameters();
+  TimedCommand(String, Command*);
+  TimedCommand(String, Command*,String);
+  virtual ~TimedCommand();
+  void setCronString(String);
+  void setCommand(Command*);
+  void setParameters(String);
+  Command* getCommand();
+  String getCronString();
+  String getParameters();
 
 private:
-	Command *command;
-	String cronString;
-	String parameters;
+  Command *command;
+  String cronString;
+  String parameters;
 };
 
 #endif /* TIMEDCOMMAND_H_ */

@@ -36,23 +36,23 @@ TimedCommand command12("55.*.*.*.*.*",&sOffCommand,"13");
 
 // create an array of timed commands
 TimedCommand *tCommands[] = {
-		&command1,
-		&command2,
+    &command1,
+    &command2,
 
-		&command3,
-		&command4,
+    &command3,
+    &command4,
 
-		&command5,
-		&command6,
+    &command5,
+    &command6,
 
-		&command7,
-		&command8,
+    &command7,
+    &command8,
 
-		&command9,
-		&command10,
+    &command9,
+    &command10,
 
-		&command11,
-		&command12
+    &command11,
+    &command12
 
 
 };
@@ -63,11 +63,11 @@ Cron cron(tCommands,12 );
 
 void setup()
 {
-	Serial.begin(9600);
-	Serial.println("Starting ArduinoCronLibrary Example");
-	
-	// sets the time to be the date and time of the compilation
-	cron.setTime(DateTime(__DATE__, __TIME__));
+  Serial.begin(9600);
+  Serial.println("Starting ArduinoCronLibrary Example");
+  
+  // sets the time to be the date and time of the compilation
+  cron.setTime(DateTime(__DATE__, __TIME__));
     // prints the current time
     cron.printTime();
 }
@@ -75,7 +75,7 @@ void setup()
 // The loop function is called in an endless loop
 void loop()
 {
-	// the loop funtion checks if a timed command 
-	// is due to be executed and executes if it is
-	cron.loop();
+  // the loop funtion checks if a timed command 
+  // is due to be executed and executes if it is
+  cron.loop();
 }

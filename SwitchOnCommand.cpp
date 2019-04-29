@@ -8,17 +8,17 @@
 #include "SwitchOnCommand.h"
 
 SwitchOnCommand::SwitchOnCommand() {
-	instruction = "switchOn";
+  instruction = "switchOn";
 }
 
 SwitchOnCommand::~SwitchOnCommand() {
 }
 
 void SwitchOnCommand::execute(String parameter){
-	int pinNo = parameter.toInt();
-	pinMode(pinNo, OUTPUT);
-	digitalWrite(pinNo,HIGH);
-	Serial.print("Pin ");
-	Serial.print(pinNo);
-	Serial.println(" switched on");
+  int pinNo = parameter.toInt();
+  pinMode(pinNo, OUTPUT);
+  digitalWrite(pinNo,HIGH);
+  Serial.print("Pin ");
+  Serial.print(pinNo);
+  Serial.println(" switched on");
 }

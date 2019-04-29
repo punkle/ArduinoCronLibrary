@@ -14,9 +14,9 @@
 
 class SwitchOnCommand: public Command {
 public:
-	SwitchOnCommand();
-	virtual ~SwitchOnCommand();
-	void execute(String parameter);
+  SwitchOnCommand();
+  virtual ~SwitchOnCommand();
+  void execute(String parameter);
 };
 
 #endif /* SWITCHONCOMMAND_H_ */

@@ -8,14 +8,14 @@
 #include "TimedCommand.h"
 
 TimedCommand::TimedCommand(String iCronString, Command *iCommand) {
-	cronString = iCronString;
-	command = iCommand;
+  cronString = iCronString;
+  command = iCommand;
 }
 
 TimedCommand::TimedCommand(String iCronString, Command *iCommand,String iParameters) {
-	cronString = iCronString;
-	command = iCommand;
-	parameters = iParameters;
+  cronString = iCronString;
+  command = iCommand;
+  parameters = iParameters;
 }
 
 
@@ -24,25 +24,25 @@ TimedCommand::~TimedCommand() {
 }
 
 void TimedCommand::setCronString(String iCronString){
-	cronString = iCronString;
+  cronString = iCronString;
 }
 
 void TimedCommand::setCommand(Command *iCommand){
-	command = iCommand;
+  command = iCommand;
 }
 
 String TimedCommand::getCronString(){
-	return cronString;
+  return cronString;
 }
 
 Command* TimedCommand::getCommand(){
-	return command;
+  return command;
 }
 
 String TimedCommand::getParameters(){
-	return parameters;
+  return parameters;
 }
 
 void TimedCommand::setParameters(String iParameters){
-	parameters = iParameters;
+  parameters = iParameters;
 }

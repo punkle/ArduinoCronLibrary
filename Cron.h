@@ -14,16 +14,16 @@
 
 class Cron {
 public:
-	Cron(TimedCommand **,int); // Get pointer to array of pointers
-	virtual ~Cron();
-	void loop();
-	void printTime();
-	void setTime(DateTime);
-	boolean matchCron(String,DateTime);
+  Cron(TimedCommand **,int); // Get pointer to array of pointers
+  virtual ~Cron();
+  void loop();
+  void printTime();
+  void setTime(DateTime);
+  boolean matchCron(String,DateTime);
 private:
-	TimedCommand **timedCommands;
-	int timedCommandsSize;
-	DateTime getTime();
+  TimedCommand **timedCommands;
+  int timedCommandsSize;
+  DateTime getTime();
 };
 
 #endif /* CRON_H_ */

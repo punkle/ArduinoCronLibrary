@@ -11,12 +11,12 @@
 
 class Command {
 public:
-	Command();
-	virtual ~Command();
-	virtual void execute (String parameter) = 0;
-	String getInstruction();
+  Command();
+  virtual ~Command();
+  virtual void execute (String parameter) = 0;
+  String getInstruction();
 protected:
-	String instruction;
+  String instruction;
 };
 
 #endif /* COMMAND_H_ */

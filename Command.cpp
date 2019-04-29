@@ -8,17 +8,17 @@
 #include "Command.h"
 
 Command::Command() {
-	instruction = "default";
+  instruction = "default";
 }
 
 Command::~Command() {
 }
 
 String Command::getInstruction(){
-	return instruction;
+  return instruction;
 }
 
 void Command::execute(String parameter){
-	Serial.println("test");
+  Serial.println("test");
 };
 
