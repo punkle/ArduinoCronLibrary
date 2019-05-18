@@ -17,6 +17,7 @@ public:
 	Cron(TimedCommand **,int); // Get pointer to array of pointers
 	virtual ~Cron();
 	void loop();
+  void start();
 	void printTime();
 	void setTime(DateTime);
 	boolean matchCron(String,DateTime);

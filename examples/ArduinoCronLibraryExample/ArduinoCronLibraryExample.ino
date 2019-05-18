@@ -65,7 +65,9 @@ void setup()
 {
 	Serial.begin(9600);
 	Serial.println("Starting ArduinoCronLibrary Example");
-	
+
+  cron.start();
+
 	// sets the time to be the date and time of the compilation
 	cron.setTime(DateTime(__DATE__, __TIME__));
     // prints the current time

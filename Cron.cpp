@@ -12,9 +12,17 @@ RTC_DS1307 RTC;
 Cron::Cron(TimedCommand **iTimedCommands, int iTimedCommandsSize) {
 	timedCommands = iTimedCommands;
 	timedCommandsSize = iTimedCommandsSize;
+}
+
+void Cron::start() {
+  Serial.begin(9600);
 
 	Wire.begin();
-    RTC.begin();
+
+  if (! RTC.begin()) {
+    Serial.println("Couldn't find RTC device, is it connected?");
+    while(1);
+  }
 }
 
 Cron::~Cron() {
